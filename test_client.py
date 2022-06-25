@@ -5,9 +5,9 @@ height = 500
 win = pygame.display.set_mode((width, height))
 pygame.display.set_caption("Client")
 
-clientNumber = 0 # Number of connected clients
+clientNumber = 0
 
-# Player class
+
 class Player():
     def __init__(self, x, y, width, height, color):
         self.x = x
@@ -15,7 +15,7 @@ class Player():
         self.width = width
         self.height = height
         self.color = color
-        self.rect = (x, y, width, height)
+        self.rect = (x,y,width,height)
         self.vel = 3
 
     def draw(self, win):
@@ -39,7 +39,7 @@ class Player():
         self.rect = (self.x, self.y, self.width, self.height)
 
 
-def redrawWindow(win, player):
+def redrawWindow(win,player):
     win.fill((255,255,255))
     player.draw(win)
     pygame.display.update()
@@ -59,6 +59,5 @@ def main():
 
         p.move()
         redrawWindow(win, p)
- 
-
+        
 main()
